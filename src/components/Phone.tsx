@@ -8,7 +8,8 @@ interface phoneProps extends HTMLAttributes<HTMLDivElement> {
 
 const Phone = ({ imgSrc, dark = false, className, ...props }: phoneProps) => {
     return (
-        <div className={cn("relative pointer-events-none overflow-hidden z-50", className)} {...props}>
+        // the props is here for taking all regular div element props like events , disable etc.
+        <div className={cn("relative pointer-events-none overflow-hidden z-50", className)} {...props}> 
 
             <img src="/phone-template-white-edges.png" alt="" className="select-none z-50 pointer-events-auto" />
 
